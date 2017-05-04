@@ -74,7 +74,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
+    #frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -85,10 +85,10 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
-    audio.a2dp.default \
-    audio.primary.msm8996 \
-    audio.r_submix.default \
-    audio.usb.default \
+    #audio.a2dp.default \
+    #audio.primary.msm8996 \
+    #audio.r_submix.default \
+    #audio.usb.default \
     libaudio-resampler \
     libaudioroute \
     libqcompostprocbundle \
@@ -112,6 +112,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/audio/mixer_paths_i2s.xml:system/etc/mixer_paths_i2s.xml
 
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:/system/etc/audio_policy_volumes.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:/system/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:/system/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
+
 # Browser
 PRODUCT_PACKAGES += \
     Gello
@@ -123,7 +130,8 @@ PRODUCT_PACKAGES += \
 # Device config scripts
 PRODUCT_PACKAGES += \
     init.leds.sh \
-    init.qcom.bt.sh
+    usf_settings.sh
+
 
 # Device init scripts
 PRODUCT_PACKAGES += \
@@ -131,7 +139,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.power.rc \
     init.qcom.usb.rc \
-    init.qcom.usb.diag.rc \
     init.target.rc \
     ueventd.qcom.rc \
     init.qcom.sh
@@ -156,56 +163,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/calib.cfg:system/etc/calib.cfg
 
-# Doze mode
+# Doze
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
-
-# Fingerprint Firmware
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/firmware/fingerpr.b00:system/firmware/image/fingerpr.b00 \
-    $(LOCAL_PATH)/firmware/fingerpr.b01:system/firmware/image/fingerpr.b01 \
-    $(LOCAL_PATH)/firmware/fingerpr.b02:system/firmware/image/fingerpr.b02 \
-    $(LOCAL_PATH)/firmware/fingerpr.b03:system/firmware/image/fingerpr.b03 \
-    $(LOCAL_PATH)/firmware/fingerpr.b04:system/firmware/image/fingerpr.b04 \
-    $(LOCAL_PATH)/firmware/fingerpr.b05:system/firmware/image/fingerpr.b05 \
-    $(LOCAL_PATH)/firmware/fingerpr.b06:system/firmware/image/fingerpr.b06 \
-    $(LOCAL_PATH)/firmware/fingerpr.mdt:system/firmware/image/fingerpr.mdt \
-    $(LOCAL_PATH)/firmware/fpca4.b00:system/firmware/image/fpca4.b00 \
-    $(LOCAL_PATH)/firmware/fpca4.b01:system/firmware/image/fpca4.b01 \
-    $(LOCAL_PATH)/firmware/fpca4.b02:system/firmware/image/fpca4.b02 \
-    $(LOCAL_PATH)/firmware/fpca4.b03:system/firmware/image/fpca4.b03 \
-    $(LOCAL_PATH)/firmware/fpca4.b04:system/firmware/image/fpca4.b04 \
-    $(LOCAL_PATH)/firmware/fpca4.b05:system/firmware/image/fpca4.b05 \
-    $(LOCAL_PATH)/firmware/fpca4.b06:system/firmware/image/fpca4.b06 \
-    $(LOCAL_PATH)/firmware/fpca4.mdt:system/firmware/image/fpca4.mdt \
-    $(LOCAL_PATH)/firmware/fpca8.b00:system/firmware/image/fpca8.b00 \
-    $(LOCAL_PATH)/firmware/fpca8.b01:system/firmware/image/fpca8.b01 \
-    $(LOCAL_PATH)/firmware/fpca8.b02:system/firmware/image/fpca8.b02 \
-    $(LOCAL_PATH)/firmware/fpca8.b03:system/firmware/image/fpca8.b03 \
-    $(LOCAL_PATH)/firmware/fpca8.b04:system/firmware/image/fpca8.b04 \
-    $(LOCAL_PATH)/firmware/fpca8.b05:system/firmware/image/fpca8.b05 \
-    $(LOCAL_PATH)/firmware/fpca8.b06:system/firmware/image/fpca8.b06 \
-    $(LOCAL_PATH)/firmware/fpca8.mdt:system/firmware/image/fpca8.mdt \
-    $(LOCAL_PATH)/firmware/fpcb7.b00:system/firmware/image/fpcb7.b00 \
-    $(LOCAL_PATH)/firmware/fpcb7.b01:system/firmware/image/fpcb7.b01 \
-    $(LOCAL_PATH)/firmware/fpcb7.b02:system/firmware/image/fpcb7.b02 \
-    $(LOCAL_PATH)/firmware/fpcb7.b03:system/firmware/image/fpcb7.b03 \
-    $(LOCAL_PATH)/firmware/fpcb7.b04:system/firmware/image/fpcb7.b04 \
-    $(LOCAL_PATH)/firmware/fpcb7.b05:system/firmware/image/fpcb7.b05 \
-    $(LOCAL_PATH)/firmware/fpcb7.b06:system/firmware/image/fpcb7.b06 \
-    $(LOCAL_PATH)/firmware/fpcb7.mdt:system/firmware/image/fpcb7.mdt \
-    $(LOCAL_PATH)/firmware/fpcta32.b00:system/firmware/image/fpcta32.b00 \
-    $(LOCAL_PATH)/firmware/fpcta32.b01:system/firmware/image/fpcta32.b01 \
-    $(LOCAL_PATH)/firmware/fpcta32.b02:system/firmware/image/fpcta32.b02 \
-    $(LOCAL_PATH)/firmware/fpcta32.b03:system/firmware/image/fpcta32.b03 \
-    $(LOCAL_PATH)/firmware/fpcta32.b04:system/firmware/image/fpcta32.b04 \
-    $(LOCAL_PATH)/firmware/fpcta32.b05:system/firmware/image/fpcta32.b05 \
-    $(LOCAL_PATH)/firmware/fpcta32.b06:system/firmware/image/fpcta32.b06 \
-    $(LOCAL_PATH)/firmware/fpcta32.mdt:system/firmware/image/fpcta32.mdt
+    fingerprintd \
+    XiaomiPocketMode
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -214,7 +179,8 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8996 \
-    libcurl
+    libcurl \
+    libgnsspps
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
@@ -227,8 +193,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/usf_tsc.idc:system/usr/idc/usf_tsc.idc \
     $(LOCAL_PATH)/idc/usf_tsc_ext.idc:system/usr/idc/usf_tsc_ext.idc \
-    $(LOCAL_PATH)/idc/usf_tsc_ptr.idc:system/usr/idc/usf_tsc_ptr.idc \
-    $(LOCAL_PATH)/idc/usf_tsc_ptr.idc:system/usr/idc/uinput-fpc.idc \
+    $(LOCAL_PATH)/idc/usf_tsc_ptr.idc:system/usr/idc/usf_tsc_ptr.idc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/atmel-maxtouch.kl:system/usr/keylayout/atmel-maxtouch.kl \
@@ -253,9 +218,13 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# IRQ Balancer
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+# KeyHandler
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
+
+# ConfigPanel
+PRODUCT_PACKAGES += \
+    ConfigPanel
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -333,7 +302,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwpa_client \
@@ -350,5 +318,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
