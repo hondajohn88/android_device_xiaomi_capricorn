@@ -25,7 +25,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/scorpio/scorpio-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-WITH_SU := true
+#WITH_SU := true
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
