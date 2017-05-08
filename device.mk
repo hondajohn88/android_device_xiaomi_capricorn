@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.power.rc \
     init.qcom.usb.rc \
+    init.qcom.usb.diag.rc \
     init.target.rc \
     ueventd.qcom.rc \
     init.qcom.sh
@@ -169,8 +170,50 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd \
-    XiaomiPocketMode
+    fingerprintd
+
+# Fingerprint Firmware
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/firmware/fingerpr.b00:system/firmware/image/fingerpr.b00 \
+    $(LOCAL_PATH)/firmware/fingerpr.b01:system/firmware/image/fingerpr.b01 \
+    $(LOCAL_PATH)/firmware/fingerpr.b02:system/firmware/image/fingerpr.b02 \
+    $(LOCAL_PATH)/firmware/fingerpr.b03:system/firmware/image/fingerpr.b03 \
+    $(LOCAL_PATH)/firmware/fingerpr.b04:system/firmware/image/fingerpr.b04 \
+    $(LOCAL_PATH)/firmware/fingerpr.b05:system/firmware/image/fingerpr.b05 \
+    $(LOCAL_PATH)/firmware/fingerpr.b06:system/firmware/image/fingerpr.b06 \
+    $(LOCAL_PATH)/firmware/fingerpr.mdt:system/firmware/image/fingerpr.mdt \
+    $(LOCAL_PATH)/firmware/fpca4.b00:system/firmware/image/fpca4.b00 \
+    $(LOCAL_PATH)/firmware/fpca4.b01:system/firmware/image/fpca4.b01 \
+    $(LOCAL_PATH)/firmware/fpca4.b02:system/firmware/image/fpca4.b02 \
+    $(LOCAL_PATH)/firmware/fpca4.b03:system/firmware/image/fpca4.b03 \
+    $(LOCAL_PATH)/firmware/fpca4.b04:system/firmware/image/fpca4.b04 \
+    $(LOCAL_PATH)/firmware/fpca4.b05:system/firmware/image/fpca4.b05 \
+    $(LOCAL_PATH)/firmware/fpca4.b06:system/firmware/image/fpca4.b06 \
+    $(LOCAL_PATH)/firmware/fpca4.mdt:system/firmware/image/fpca4.mdt \
+    $(LOCAL_PATH)/firmware/fpca8.b00:system/firmware/image/fpca8.b00 \
+    $(LOCAL_PATH)/firmware/fpca8.b01:system/firmware/image/fpca8.b01 \
+    $(LOCAL_PATH)/firmware/fpca8.b02:system/firmware/image/fpca8.b02 \
+    $(LOCAL_PATH)/firmware/fpca8.b03:system/firmware/image/fpca8.b03 \
+    $(LOCAL_PATH)/firmware/fpca8.b04:system/firmware/image/fpca8.b04 \
+    $(LOCAL_PATH)/firmware/fpca8.b05:system/firmware/image/fpca8.b05 \
+    $(LOCAL_PATH)/firmware/fpca8.b06:system/firmware/image/fpca8.b06 \
+    $(LOCAL_PATH)/firmware/fpca8.mdt:system/firmware/image/fpca8.mdt \
+    $(LOCAL_PATH)/firmware/fpcb7.b00:system/firmware/image/fpcb7.b00 \
+    $(LOCAL_PATH)/firmware/fpcb7.b01:system/firmware/image/fpcb7.b01 \
+    $(LOCAL_PATH)/firmware/fpcb7.b02:system/firmware/image/fpcb7.b02 \
+    $(LOCAL_PATH)/firmware/fpcb7.b03:system/firmware/image/fpcb7.b03 \
+    $(LOCAL_PATH)/firmware/fpcb7.b04:system/firmware/image/fpcb7.b04 \
+    $(LOCAL_PATH)/firmware/fpcb7.b05:system/firmware/image/fpcb7.b05 \
+    $(LOCAL_PATH)/firmware/fpcb7.b06:system/firmware/image/fpcb7.b06 \
+    $(LOCAL_PATH)/firmware/fpcb7.mdt:system/firmware/image/fpcb7.mdt \
+    $(LOCAL_PATH)/firmware/fpcta32.b00:system/firmware/image/fpcta32.b00 \
+    $(LOCAL_PATH)/firmware/fpcta32.b01:system/firmware/image/fpcta32.b01 \
+    $(LOCAL_PATH)/firmware/fpcta32.b02:system/firmware/image/fpcta32.b02 \
+    $(LOCAL_PATH)/firmware/fpcta32.b03:system/firmware/image/fpcta32.b03 \
+    $(LOCAL_PATH)/firmware/fpcta32.b04:system/firmware/image/fpcta32.b04 \
+    $(LOCAL_PATH)/firmware/fpcta32.b05:system/firmware/image/fpcta32.b05 \
+    $(LOCAL_PATH)/firmware/fpcta32.b06:system/firmware/image/fpcta32.b06 \
+    $(LOCAL_PATH)/firmware/fpcta32.mdt:system/firmware/image/fpcta32.mdt
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
@@ -193,7 +236,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/usf_tsc.idc:system/usr/idc/usf_tsc.idc \
     $(LOCAL_PATH)/idc/usf_tsc_ext.idc:system/usr/idc/usf_tsc_ext.idc \
-    $(LOCAL_PATH)/idc/usf_tsc_ptr.idc:system/usr/idc/usf_tsc_ptr.idc
+    $(LOCAL_PATH)/idc/usf_tsc_ptr.idc:system/usr/idc/usf_tsc_ptr.idc \
+    $(LOCAL_PATH)/idc/usf_tsc_ptr.idc:system/usr/idc/uinput-fpc.idc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/atmel-maxtouch.kl:system/usr/keylayout/atmel-maxtouch.kl \
@@ -318,4 +362,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini

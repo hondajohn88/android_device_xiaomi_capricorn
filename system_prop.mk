@@ -3,7 +3,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio_hal.period_size=192 \
     audio.deep_buffer.media=true \
-    audio.offload.buffer.size.kb=64 \
+    audio.offload.buffer.size.kb=32 \
     audio.offload.gapless.enabled=true \
     audio.offload.min.duration.secs=15 \
     audio.offload.multiaac.enable=true \
@@ -14,12 +14,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.track.enable=false \
     audio.offload.video=true \
     audio.safx.pbe.enabled=true \
-    audio.parser.ip.buffer.size=262144 \
+    audio.parser.ip.buffer.size=0 \
     audio.dolby.ds2.enabled=false \
     audio.dolby.ds2.hardbypass=false \
     qcom.hw.aac.encoder=true \
     tunnel.audio.encode=false \
-    use.voice.path.for.pcm.voip=true
+    use.voice.path.for.pcm.voip=true \
+
+#HiFi
+    ro.audio.hifi=true
+    persist.audio.hifi=false
+    persist.audio.hifi.volume=0
+
+#Navtive 44.1kHz playback
+    persist.audio.native.44.1kHz=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
@@ -51,7 +59,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.hal3hfr.enable=0 \
     persist.camera.gyro.disable=0 \
-    persist.camera.imglib.fddsp=1
+    persist.camera.imglib.fddsp=1 \
+    persist.camera.xm.green.r=0.97 \
+    persist.camera.xm.green.b=0.96 \
+    camera.disable_zsl_mode=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -82,9 +93,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false \
-    persist.qfp.fd_enabled=0 \
-    persist.qfp.home_btn_enabled=0 \
-    persist.qfp.ssc_enable_island=0 \
+    persist.qfp.fd_enabled=1 \
+    persist.qfp.home_btn_enabled=1 \
+    persist.qfp.ssc_enable_island=1 \
     persist.qfp.ssc_fgoff_dil_s1=10 \
     persist.qfp.ssc_fgoff_dil_home=10 \
     persist.qfp.ssc_thresh_s1=0.570 \
@@ -102,7 +113,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp.cbge_sleep_enabled=0 \
     persist.qfp.filter_liftfinger=0 \
     persist.qfp.wup_display=0 \
-    persist.qfp.capacitive_enabled=0
+    persist.qfp.capacitive_enabled=1
 
 #property to set fingerpirnt vendor
 PRODUCT_PROPERTY_OVERRIDES += \
