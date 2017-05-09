@@ -21,17 +21,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     tunnel.audio.encode=false \
     use.voice.path.for.pcm.voip=true \
 
-#HiFi
-    ro.audio.hifi=true
-    persist.audio.hifi=false
-    persist.audio.hifi.volume=0
-
-#Navtive 44.1kHz playback
-    persist.audio.native.44.1kHz=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
-    ro.qc.sdk.audio.fluencetype=none \
+    ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.voicerec=false \
     persist.audio.fluence.speaker=true
@@ -62,7 +55,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.imglib.fddsp=1 \
     persist.camera.xm.green.r=0.97 \
     persist.camera.xm.green.b=0.96 \
-    camera.disable_zsl_mode=1
+    camera.disable_zsl_mode=1 \
+    persist.camera.HAL3.enabled=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
