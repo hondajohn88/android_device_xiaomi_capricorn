@@ -21,6 +21,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     tunnel.audio.encode=false \
     use.voice.path.for.pcm.voip=true \
 
+#HiFi
+    ro.audio.hifi=true
+    persist.audio.hifi=false
+    persist.audio.hifi.volume=0
+
+#Navtive 44.1kHz playback
+    persist.audio.native.44.1kHz=true
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
@@ -87,9 +95,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false \
-    persist.qfp.fd_enabled=1 \
-    persist.qfp.home_btn_enabled=1 \
-    persist.qfp.ssc_enable_island=1 \
+    persist.qfp.fd_enabled=0 \
+    persist.qfp.home_btn_enabled=0 \
+    persist.qfp.ssc_enable_island=0 \
     persist.qfp.ssc_fgoff_dil_s1=10 \
     persist.qfp.ssc_fgoff_dil_home=10 \
     persist.qfp.ssc_thresh_s1=0.570 \
@@ -107,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp.cbge_sleep_enabled=0 \
     persist.qfp.filter_liftfinger=0 \
     persist.qfp.wup_display=0 \
-    persist.qfp.capacitive_enabled=1
+    persist.qfp.capacitive_enabled=0
 
 #property to set fingerpirnt vendor
 PRODUCT_PROPERTY_OVERRIDES += \

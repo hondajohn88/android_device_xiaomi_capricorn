@@ -84,6 +84,8 @@ on boot
     chmod 0666 /dev/i2c-3
     chmod 0666 /dev/i2c-9
 
+    setprop persist.camera.HAL3.enabled 1
+
 # Start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
@@ -91,12 +93,32 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     group camera system inet input graphics
     writepid /dev/cpuset/system-background/tasks
 
+# Fingerprint
+    chmod 0664 /sys/devices/soc/soc:fpc_fpc1020/irq
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/irq
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/report_home
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/report_home
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/update_info
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/update_info
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/screen_state
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/screen_state
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/hw_reset
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/hw_reset
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/proximity_state
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/proximity_state
+
 # Fingerprint service
 service fingerprintd /system/bin/fingerprintd
     class late_start
     user system
     group system drmrpc diag input
     writepid /dev/cpuset/system-background/tasks
+
+# NFC
+    chmod 0666 /dev/pn544
+    chown nfc nfc /dev/pn544
+    chmod 0666 /dev/p61
+    chown spi spi /dev/p61
 
 service qfp-daemon /system/bin/qfp-daemon
     class late_start
