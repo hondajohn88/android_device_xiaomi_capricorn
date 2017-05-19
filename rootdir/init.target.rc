@@ -79,12 +79,12 @@ on boot
     chmod 0666 /sys/class/leds/led:torch_0/brightness
     chmod 0666 /sys/class/leds/led:torch_1/brightness
     chmod 0666 /sys/class/leds/led:switch/brightness
+    chown system system /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/button-backlight1/brightness
 
     # Access permission for smartPA
     chmod 0666 /dev/i2c-3
     chmod 0666 /dev/i2c-9
-
-    setprop persist.camera.HAL3.enabled 1
 
 # Start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -115,8 +115,8 @@ service fingerprintd /system/bin/fingerprintd
     writepid /dev/cpuset/system-background/tasks
 
 # NFC
-    chmod 0666 /dev/pn544
-    chown nfc nfc /dev/pn544
+    chmod 0666 /dev/pn548
+    chown nfc nfc /dev/pn548
     chmod 0666 /dev/p61
     chown spi spi /dev/p61
 
