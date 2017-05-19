@@ -41,7 +41,7 @@
     <ctl name="RX2 Digital Volume" value="84" />
     <ctl name="RX3 Digital Volume" value="84" />
     <ctl name="RX4 Digital Volume" value="84" />
-    <ctl name="ADC2 Volume" value="19" />
+    <ctl name="ADC2 Volume" value="40" />
     <ctl name="DEC5 Volume" value="84" />
     <ctl name="DEC10 Volume" value="84" />
     <ctl name="COMP0 Switch" value="0" />
