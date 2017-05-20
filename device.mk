@@ -25,7 +25,9 @@ $(call inherit-product-if-exists, vendor/xiaomi/scorpio/scorpio-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-#WITH_SU := true
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -131,6 +133,9 @@ PRODUCT_PACKAGES += \
     init.leds.sh \
     usf_settings.sh
 
+# Consumerir
+PRODUCT_PACKAGES += \
+    consumerir.msm8996
 
 # Device init scripts
 PRODUCT_PACKAGES += \
