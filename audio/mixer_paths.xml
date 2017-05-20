@@ -164,7 +164,7 @@
     <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
     <ctl name="EAR PA Gain" value="POS_6_DB" />
     <ctl name="SLIM RX2 MUX" value="ZERO" />
-    <ctl name="SPK DRV Volume" value="8" />
+    <ctl name="SPK DRV Volume" value="10" />
     <ctl name="AIF1_CAP Mixer SLIM TX7" value="0" />
     <ctl name="AIF1_CAP Mixer SLIM TX8" value="0"/>
     <ctl name="CLASS_H_DSM MUX" value="ZERO" />

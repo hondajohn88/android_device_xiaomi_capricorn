@@ -2223,7 +2223,7 @@
 
     <path name="handset-mic">
         <path name="adc4" />
-        <ctl name="ADC4 Volume" value="15" />
+        <ctl name="ADC4 Volume" value="20" />
     </path>
 
     <path name="handset-mic-db">
@@ -2580,8 +2580,8 @@
         <ctl name="SLIM TX5 MUX" value="DEC5" />
         <ctl name="ADC MUX5" value="AMIC" />
         <ctl name="AMIC MUX5" value="ADC3" />
-        <ctl name="ADC4 Volume" value="10" />
-        <ctl name="ADC3 Volume" value="10" />
+        <ctl name="ADC4 Volume" value="20" />
+        <ctl name="ADC3 Volume" value="20" />
     </path>
 
     <path name="camcorder-tmic-far">
@@ -2754,8 +2754,8 @@
 
     <path name="handset-stereo-dmic-ef">
         <path name="handset-dmic-endfire" />
-        <ctl name="ADC4 Volume" value="10" />
-        <ctl name="ADC3 Volume" value="10" />
+        <ctl name="ADC4 Volume" value="20" />
+        <ctl name="ADC3 Volume" value="20" />
     </path>
 
     <path name="speaker-stereo-dmic-ef">

@@ -464,7 +464,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareWakeKeys">65</integer>
+    <integer name="config_deviceHardwareWakeKeys">71</integer>
 
     <!-- Operating volatage for bluetooth controller. 0 by default-->
     <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
