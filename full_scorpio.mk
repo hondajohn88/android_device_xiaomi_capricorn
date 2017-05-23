@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright (C) 2017 The LineageOS Project
 #
@@ -15,13 +14,16 @@
 # limitations under the License.
 #
 
-set -e
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Required!
-export DEVICE=scorpio
-export DEVICE_COMMON=msm8996-common
-export VENDOR=xiaomi
+# Inherit from scorpio device
+$(call inherit-product, device/xiaomi/scorpio/device.mk)
 
-export DEVICE_BRINGUP_YEAR=2017
-
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+# Device identifier. This must come after all inclusions
+PRODUCT_NAME := full_scorpio
+PRODUCT_DEVICE := scorpio
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := MI Note 2
+PRODUCT_MANUFACTURER := Xiaomi

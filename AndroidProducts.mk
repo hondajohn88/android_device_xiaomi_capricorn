@@ -1,4 +1,3 @@
-#!/bin/bash
 #
 # Copyright (C) 2017 The LineageOS Project
 #
@@ -13,15 +12,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-set -e
-
-# Required!
-export DEVICE=scorpio
-export DEVICE_COMMON=msm8996-common
-export VENDOR=xiaomi
-
-export DEVICE_BRINGUP_YEAR=2017
-
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/full_scorpio.mk
