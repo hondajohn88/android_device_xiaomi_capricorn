@@ -20,36 +20,36 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="OFF" />
-    <ctl name="LINEOUT1 Volume" value="40" />
-    <ctl name="LINEOUT2 Volume" value="40" />
-    <ctl name="LINEOUT3 Volume" value="40" />
-    <ctl name="LINEOUT4 Volume" value="40" />
+    <ctl name="LINEOUT1 Volume" value="30" />
+    <ctl name="LINEOUT2 Volume" value="30" />
+    <ctl name="LINEOUT3 Volume" value="30" />
+    <ctl name="LINEOUT4 Volume" value="30" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
-    <ctl name="RX0 Digital Volume" value="95" />
-    <ctl name="RX1 Digital Volume" value="95" />
-    <ctl name="RX2 Digital Volume" value="95" />
-    <ctl name="RX3 Digital Volume" value="95" />
-    <ctl name="RX4 Digital Volume" value="95" />
-    <ctl name="RX5 Digital Volume" value="95" />
-    <ctl name="RX6 Digital Volume" value="95" />
-    <ctl name="RX7 Digital Volume" value="95" />
-    <ctl name="RX8 Digital Volume" value="95" />
+    <ctl name="RX0 Digital Volume" value="84" />
+    <ctl name="RX1 Digital Volume" value="84" />
+    <ctl name="RX2 Digital Volume" value="84" />
+    <ctl name="RX3 Digital Volume" value="84" />
+    <ctl name="RX4 Digital Volume" value="84" />
+    <ctl name="RX5 Digital Volume" value="84" />
+    <ctl name="RX6 Digital Volume" value="84" />
+    <ctl name="RX7 Digital Volume" value="84" />
+    <ctl name="RX8 Digital Volume" value="84" />
     <ctl name="ADC1 Volume" value="50" />
     <ctl name="ADC2 Volume" value="50" />
     <ctl name="ADC3 Volume" value="30" />
     <ctl name="ADC4 Volume" value="30" />
     <ctl name="ADC5 Volume" value="50" />
     <ctl name="ADC6 Volume" value="50" />
-    <ctl name="DEC0 Volume" value="95" />
-    <ctl name="DEC1 Volume" value="95" />
-    <ctl name="DEC2 Volume" value="95" />
-    <ctl name="DEC3 Volume" value="95" />
-    <ctl name="DEC4 Volume" value="95" />
-    <ctl name="DEC5 Volume" value="95" />
-    <ctl name="DEC6 Volume" value="95" />
-    <ctl name="DEC7 Volume" value="95" />
-    <ctl name="DEC8 Volume" value="95" />
+    <ctl name="DEC0 Volume" value="84" />
+    <ctl name="DEC1 Volume" value="84" />
+    <ctl name="DEC2 Volume" value="84" />
+    <ctl name="DEC3 Volume" value="84" />
+    <ctl name="DEC4 Volume" value="84" />
+    <ctl name="DEC5 Volume" value="84" />
+    <ctl name="DEC6 Volume" value="84" />
+    <ctl name="DEC7 Volume" value="84" />
+    <ctl name="DEC8 Volume" value="84" />
     <ctl name="COMP1 Switch" value="1" />
     <ctl name="COMP2 Switch" value="1" />
     <ctl name="COMP3 Switch" value="1" />
@@ -2115,12 +2115,12 @@
 
     <path name="top-mic">
         <path name="adc3" />
-        <ctl name="ADC3 Volume" value="30" />
+        <ctl name="ADC3 Volume" value="25" />
     </path>
 
     <path name="front-mic">
         <path name="adc1" />
-        <ctl name="ADC1 Volume" value="30" />
+        <ctl name="ADC1 Volume" value="25" />
     </path>
 
     <path name="speaker">
@@ -2178,7 +2178,7 @@
 
     <path name="speaker-mic-sbc">
         <path name="adc5" />
-        <ctl name="ADC5 Volume" value="30" />
+        <ctl name="ADC5 Volume" value="20" />
     </path>
 
     <path name="speaker-protected">
@@ -2223,7 +2223,7 @@
 
     <path name="handset-mic">
         <path name="adc4" />
-        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="20" />
     </path>
 
     <path name="handset-mic-db">
@@ -2232,12 +2232,12 @@
 
     <path name="handset-mic-cdp">
         <path name="adc4" />
-        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="20" />
     </path>
 
     <path name="handset-mic-sbc">
         <path name="adc5" />
-        <ctl name="ADC5 Volume" value="30" />
+        <ctl name="ADC5 Volume" value="20" />
     </path>
 
     <path name="three-mic">
@@ -2563,7 +2563,7 @@
 
     <path name="voice-rec-mic">
         <path name="handset-mic" />
-        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="25" />
     </path>
 
     <path name="camcorder-mic">
@@ -2580,8 +2580,8 @@
         <ctl name="SLIM TX5 MUX" value="DEC5" />
         <ctl name="ADC MUX5" value="AMIC" />
         <ctl name="AMIC MUX5" value="ADC3" />
-        <ctl name="ADC4 Volume" value="30" />
-        <ctl name="ADC3 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="20" />
+        <ctl name="ADC3 Volume" value="20" />
     </path>
 
     <path name="camcorder-tmic-far">
@@ -2711,7 +2711,7 @@
         <ctl name="SLIM TX5 MUX" value="DEC5" />
         <ctl name="ADC MUX5" value="AMIC" />
         <ctl name="AMIC MUX5" value="ADC4" />
-        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="20" />
         <ctl name="SLIM TX6 MUX" value="DEC6" />
         <ctl name="ADC MUX6" value="AMIC" />
         <ctl name="AMIC MUX6" value="ADC5" />
@@ -2719,7 +2719,7 @@
         <ctl name="SLIM TX7 MUX" value="DEC7" />
         <ctl name="ADC MUX7" value="AMIC" />
         <ctl name="AMIC MUX7" value="ADC3" />
-        <ctl name="ADC3 Volume" value="30" />
+        <ctl name="ADC3 Volume" value="20" />
         <ctl name="SLIM TX8 MUX" value="DEC8" />
         <ctl name="ADC MUX8" value="AMIC" />
         <ctl name="AMIC MUX8" value="ADC6" />
@@ -2754,8 +2754,8 @@
 
     <path name="handset-stereo-dmic-ef">
         <path name="handset-dmic-endfire" />
-        <ctl name="ADC4 Volume" value="30" />
-        <ctl name="ADC3 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="20" />
+        <ctl name="ADC3 Volume" value="20" />
     </path>
 
     <path name="speaker-stereo-dmic-ef">
