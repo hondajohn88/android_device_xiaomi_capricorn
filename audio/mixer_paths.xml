@@ -26,30 +26,30 @@
     <ctl name="LINEOUT4 Volume" value="30" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
-    <ctl name="RX1 Digital Volume" value="84" />
-    <ctl name="RX2 Digital Volume" value="84" />
-    <ctl name="RX3 Digital Volume" value="84" />
-    <ctl name="RX4 Digital Volume" value="84" />
-    <ctl name="RX5 Digital Volume" value="84" />
-    <ctl name="RX6 Digital Volume" value="84" />
-    <ctl name="RX7 Digital Volume" value="84" />
-    <ctl name="RX8 Digital Volume" value="84" />
+    <ctl name="RX1 Digital Volume" value="95" />
+    <ctl name="RX2 Digital Volume" value="95" />
+    <ctl name="RX3 Digital Volume" value="95" />
+    <ctl name="RX4 Digital Volume" value="95" />
+    <ctl name="RX5 Digital Volume" value="95" />
+    <ctl name="RX6 Digital Volume" value="95" />
+    <ctl name="RX7 Digital Volume" value="95" />
+    <ctl name="RX8 Digital Volume" value="95" />
     <ctl name="ADC1 Volume" value="50" />
     <ctl name="ADC2 Volume" value="50" />
     <ctl name="ADC3 Volume" value="30" />
     <ctl name="ADC4 Volume" value="30" />
     <ctl name="ADC5 Volume" value="50" />
     <ctl name="ADC6 Volume" value="50" />
-    <ctl name="DEC1 Volume" value="84" />
-    <ctl name="DEC2 Volume" value="84" />
-    <ctl name="DEC3 Volume" value="84" />
-    <ctl name="DEC4 Volume" value="84" />
-    <ctl name="DEC5 Volume" value="84" />
-    <ctl name="DEC6 Volume" value="84" />
-    <ctl name="DEC7 Volume" value="84" />
-    <ctl name="DEC8 Volume" value="84" />
-    <ctl name="DEC9 Volume" value="84" />
-    <ctl name="DEC10 Volume" value="84" />
+    <ctl name="DEC1 Volume" value="95" />
+    <ctl name="DEC2 Volume" value="95" />
+    <ctl name="DEC3 Volume" value="95" />
+    <ctl name="DEC4 Volume" value="95" />
+    <ctl name="DEC5 Volume" value="95" />
+    <ctl name="DEC6 Volume" value="95" />
+    <ctl name="DEC7 Volume" value="95" />
+    <ctl name="DEC8 Volume" value="95" />
+    <ctl name="DEC9 Volume" value="95" />
+    <ctl name="DEC10 Volume" value="95" />
     <ctl name="COMP0 Switch" value="0" />
     <ctl name="COMP1 Switch" value="0" />
     <ctl name="COMP2 Switch" value="0" />
@@ -1561,7 +1561,7 @@
         <ctl name="SLIM_0_RX Channels" value="One" />
         <ctl name="RX7 MIX1 INP1" value="RX1" />
         <ctl name="COMP0 Switch" value="1" />
-        <ctl name="RX7 Digital Volume" value="84" />
+        <ctl name="RX7 Digital Volume" value="95" />
     </path>
 
     <path name="voice-speaker-protected">
@@ -1584,7 +1584,7 @@
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
         <ctl name="DAC1 Switch" value="1" />
-        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="RX1 Digital Volume" value="95" />
     </path>
 
     <path name="handset-mic">
@@ -1602,12 +1602,12 @@
 
     <path name="handset-mic-cdp">
         <path name="adc1" />
-        <ctl name="ADC1 Volume" value="30" />
+        <ctl name="ADC1 Volume" value="40" />
     </path>
 
     <path name="handset-mic-sbc">
         <path name="adc5" />
-        <ctl name="ADC5 Volume" value="30" />
+        <ctl name="ADC5 Volume" value="40" />
     </path>
 
     <path name="anc-handset">
@@ -1670,10 +1670,10 @@
         <ctl name="SLIM_0_RX Channels" value="Two" />
         <ctl name="RX3 MIX1 INP1" value="RX1" />
         <ctl name="RX5 MIX1 INP1" value="RX2" />
-        <ctl name="RX3 Digital Volume" value="68" />
-        <ctl name="RX5 Digital Volume" value="68" />
-        <ctl name="LINEOUT1 Volume" value="84" />
-        <ctl name="LINEOUT2 Volume" value="84" />
+        <ctl name="RX3 Digital Volume" value="85" />
+        <ctl name="RX5 Digital Volume" value="85" />
+        <ctl name="LINEOUT1 Volume" value="95" />
+        <ctl name="LINEOUT2 Volume" value="95" />
         <ctl name="COMP2 Switch" value="1" />
     </path>
 
