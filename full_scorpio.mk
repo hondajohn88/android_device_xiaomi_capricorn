@@ -25,5 +25,5 @@ $(call inherit-product, device/xiaomi/scorpio/device.mk)
 PRODUCT_NAME := full_scorpio
 PRODUCT_DEVICE := scorpio
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := MI Note 2
+PRODUCT_MODEL := Mi Note 2
 PRODUCT_MANUFACTURER := Xiaomi

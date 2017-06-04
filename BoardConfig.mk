@@ -16,22 +16,22 @@
 # inherit from common msm8996-common
 -include device/xiaomi/msm8996-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/scorpio
+PLATFORM_PATH := device/xiaomi/scorpio
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := scorpio
 
 # Board
-TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+TARGET_BOARD_INFO_FILE := $(PLATFORM_PATH)/board-info.txt
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/bluetooth
 
 # Kernel
 TARGET_KERNEL_CONFIG := scorpio_defconfig
 
 # Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 
 # inherit from the proprietary version
 -include vendor/xiaomi/scorpio/BoardConfigVendor.mk
