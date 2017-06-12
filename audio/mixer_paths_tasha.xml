@@ -20,10 +20,10 @@
     <ctl name="Voip Evrc Min Max Rate Config" id="1" value="4" />
     <ctl name="Voip Dtx Mode" value="0" />
     <ctl name="TTY Mode" value="OFF" />
-    <ctl name="LINEOUT1 Volume" value="30" />
-    <ctl name="LINEOUT2 Volume" value="30" />
-    <ctl name="LINEOUT3 Volume" value="30" />
-    <ctl name="LINEOUT4 Volume" value="30" />
+    <ctl name="LINEOUT1 Volume" value="65" />
+    <ctl name="LINEOUT2 Volume" value="65" />
+    <ctl name="LINEOUT3 Volume" value="65" />
+    <ctl name="LINEOUT4 Volume" value="65" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
     <ctl name="RX0 Digital Volume" value="95" />
@@ -39,8 +39,8 @@
     <ctl name="ADC2 Volume" value="50" />
     <ctl name="ADC3 Volume" value="30" />
     <ctl name="ADC4 Volume" value="30" />
-    <ctl name="ADC5 Volume" value="50" />
-    <ctl name="ADC6 Volume" value="50" />
+    <ctl name="ADC5 Volume" value="30" />
+    <ctl name="ADC6 Volume" value="30" />
     <ctl name="DEC0 Volume" value="95" />
     <ctl name="DEC1 Volume" value="95" />
     <ctl name="DEC2 Volume" value="95" />
@@ -2162,7 +2162,7 @@
     </path>
 
     <path name="sidetone-handset">
-        <ctl name="IIR0 INP0 Volume" value="50" />
+        <ctl name="IIR0 INP0 Volume" value="45" />
         <ctl name="RX INT0 MIX2 INP" value="SRC0" />
     </path>
 
@@ -2178,7 +2178,7 @@
 
     <path name="speaker-mic-sbc">
         <path name="adc5" />
-        <ctl name="ADC5 Volume" value="30" />
+        <ctl name="ADC5 Volume" value="20" />
     </path>
 
     <path name="speaker-protected">
@@ -2223,7 +2223,7 @@
 
     <path name="handset-mic">
         <path name="adc4" />
-        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="7" />
     </path>
 
     <path name="handset-mic-db">
@@ -2232,12 +2232,12 @@
 
     <path name="handset-mic-cdp">
         <path name="adc4" />
-        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC4 Volume" value="20" />
     </path>
 
     <path name="handset-mic-sbc">
         <path name="adc5" />
-        <ctl name="ADC5 Volume" value="30" />
+        <ctl name="ADC5 Volume" value="14" />
     </path>
 
     <path name="three-mic">
