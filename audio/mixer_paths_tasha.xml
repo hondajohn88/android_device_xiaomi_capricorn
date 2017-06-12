@@ -2120,7 +2120,7 @@
 
     <path name="front-mic">
         <path name="adc1" />
-        <ctl name="ADC1 Volume" value="25" />
+        <ctl name="ADC1 Volume" value="30" />
     </path>
 
     <path name="speaker">
@@ -2162,7 +2162,7 @@
     </path>
 
     <path name="sidetone-handset">
-        <ctl name="IIR0 INP0 Volume" value="50" />
+        <ctl name="IIR0 INP0 Volume" value="45" />
         <ctl name="RX INT0 MIX2 INP" value="SRC0" />
     </path>
 
@@ -2223,7 +2223,7 @@
 
     <path name="handset-mic">
         <path name="adc4" />
-        <ctl name="ADC4 Volume" value="20" />
+        <ctl name="ADC4 Volume" value="7" />
     </path>
 
     <path name="handset-mic-db">
@@ -2237,7 +2237,7 @@
 
     <path name="handset-mic-sbc">
         <path name="adc5" />
-        <ctl name="ADC5 Volume" value="20" />
+        <ctl name="ADC5 Volume" value="14" />
     </path>
 
     <path name="three-mic">
