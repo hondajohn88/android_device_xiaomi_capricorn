@@ -2613,6 +2613,7 @@
 
     <path name="camcorder-mic">
         <path name="handset-mic" />
+        <ctl name="ADC4 Volume" value="30" />
     </path>
 
     <path name="camcorder-dmic">
@@ -2625,8 +2626,8 @@
         <ctl name="SLIM TX5 MUX" value="DEC5" />
         <ctl name="ADC MUX5" value="AMIC" />
         <ctl name="AMIC MUX5" value="ADC3" />
-        <ctl name="ADC4 Volume" value="3" />
-        <ctl name="ADC3 Volume" value="3" />
+        <ctl name="ADC4 Volume" value="30" />
+        <ctl name="ADC3 Volume" value="30" />
     </path>
 
     <path name="camcorder-tmic-far">
@@ -2636,13 +2637,13 @@
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SLIM TX5 MUX" value="DEC5" />
         <ctl name="ADC MUX5" value="AMIC" />
-        <ctl name="AMIC MUX5" value="ADC4" />
+        <ctl name="AMIC MUX5" value="30" />
         <ctl name="SLIM TX6 MUX" value="DEC6" />
         <ctl name="ADC MUX6" value="AMIC" />
-        <ctl name="AMIC MUX6" value="ADC1" />
+        <ctl name="AMIC MUX6" value="30" />
         <ctl name="SLIM TX7 MUX" value="DEC7" />
         <ctl name="ADC MUX7" value="AMIC" />
-        <ctl name="AMIC MUX7" value="ADC3" />
+        <ctl name="AMIC MUX7" value="30" />
 
     </path>
 
@@ -2653,13 +2654,13 @@
         <ctl name="SLIM_0_TX Channels" value="Three" />
         <ctl name="SLIM TX5 MUX" value="DEC5" />
         <ctl name="ADC MUX5" value="AMIC" />
-        <ctl name="AMIC MUX5" value="ADC4" />
+        <ctl name="AMIC MUX5" value="30" />
         <ctl name="SLIM TX6 MUX" value="DEC6" />
         <ctl name="ADC MUX6" value="AMIC" />
-        <ctl name="AMIC MUX6" value="ADC1" />
+        <ctl name="AMIC MUX6" value="30" />
         <ctl name="SLIM TX7 MUX" value="DEC7" />
         <ctl name="ADC MUX7" value="AMIC" />
-        <ctl name="AMIC MUX7" value="ADC3" />
+        <ctl name="AMIC MUX7" value="30" />
     </path>
 
     <path name="hdmi-tx">
