@@ -1,0 +1,12 @@
+allow system_server lirc_device:chr_file rw_file_perms;
+allow system_server persist_file:file r_file_perms;
+allow system_server proc_touchpanel:dir search;
+allow system_server proc_touchpanel:file rw_file_perms;
+allow system_server sound_device:chr_file rw_file_perms;
+allow system_server sysfs_fpc_keyevents:file rw_file_perms;
+allow system_server sysfs_fpc_wakeup:file rw_file_perms;
+
+# talk to perfd
+allow system_server perfd_data_file:dir search;
+allow system_server perfd_data_file:sock_file write;
+allow system_server perfd:unix_stream_socket connectto;
